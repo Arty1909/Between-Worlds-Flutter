@@ -1,0 +1,2372 @@
+{
+  "nodes": {
+    "threshold": {
+      "chapter": 0,
+      "location": "Дверь между мирами",
+      "bg": "11",
+      "character": null,
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Ещё минуту назад здесь была обычная дверь. Теперь в её замке поворачивается ключ, которого ты никогда не видела.",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "hero",
+          "text": "Мне бы испугаться. Но почему кажется, что меня здесь ждали?",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "narrator",
+          "text": "На ладони остаётся тёплый ключ с тремя пустыми гнёздами. Из-за двери кто-то зовёт тебя по имени: «{name}…».",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        }
+      ],
+      "clue": "threshold",
+      "choices": [
+        {
+          "text": "Шагнуть на голос",
+          "next": "lady",
+          "reply": "Ты переступаешь порог. Страх остаётся рядом, но больше не выбирает за тебя.",
+          "effects": {
+            "courage": 1
+          },
+          "clue": null,
+          "label": "Смелость +1",
+          "requires": {}
+        },
+        {
+          "text": "Сначала рассмотреть ключ",
+          "next": "lady",
+          "reply": "В центре ключа ты замечаешь ещё одно углубление — гладкое, как зеркало.",
+          "effects": {
+            "insight": 1
+          },
+          "clue": null,
+          "label": "Чуткость +1",
+          "requires": {}
+        }
+      ],
+      "framing": "full"
+    },
+    "lady": {
+      "chapter": 0,
+      "location": "Изумрудный зал",
+      "bg": "0",
+      "character": "lady",
+      "lines": [
+        {
+          "speaker": "lady",
+          "text": "Добро пожаловать, {name}. Я Адель. Дверь привела тебя, потому что пути между нашими мирами начали исчезать.",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "hero",
+          "text": "И я должна их спасти? Я даже не знаю, как вернуться домой.",
+          "emotion": "worried",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "lady",
+          "text": "Ты ничего нам не должна. Найди три осколка ключа, и дверь снова откроется. А куда она поведёт — решишь сама.",
+          "emotion": "resolve",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Я помогу. Но расскажи мне правду",
+          "next": "threshold_workshop",
+          "reply": "«Тогда начнём с правды: однажды я уже выбрала за другого человека. Больше не стану». Адель впервые отводит взгляд.",
+          "effects": {
+            "insight": 1,
+            "bond_lady": 1
+          },
+          "clue": null,
+          "label": "Чуткость · доверие Адель",
+          "requires": {}
+        },
+        {
+          "text": "Сначала найду дорогу домой",
+          "next": "threshold_workshop",
+          "reply": "«Это честно», — отвечает Адель и открывает проход. Кажется, здесь ценят даже неудобную правду.",
+          "effects": {
+            "courage": 1
+          },
+          "clue": null,
+          "label": "Смелость +1",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "fiery": {
+      "chapter": 0,
+      "location": "Долина огня",
+      "bg": "2",
+      "character": "fiery",
+      "lines": [
+        {
+          "speaker": "fiery",
+          "text": "Ты держишь ключ слишком крепко. Ещё немного — и решишь, что он принадлежит тебе.",
+          "emotion": "resolve",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "А ты всегда встречаешь гостей загадками?",
+          "emotion": "neutral",
+          "hero_emotion": "warm"
+        },
+        {
+          "speaker": "fiery",
+          "text": "Только тех, кто мне нравится. Я Эш. Запомни: сила открывает дверь. Но удержать её открытой может только доверие.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Протянуть ей ладонь с ключом",
+          "next": "forge_lunch",
+          "reply": "Пламя касается твоих пальцев, не обжигая. «Ладно, смелая. Увидимся у последней двери».",
+          "effects": {
+            "courage": 1,
+            "bond_fiery": 1
+          },
+          "clue": null,
+          "label": "Смелость · доверие Эш",
+          "requires": {}
+        },
+        {
+          "text": "Спросить, чего боится само пламя",
+          "next": "forge_lunch",
+          "reply": "«Что однажды некому будет греться рядом». Ты запоминаешь её ответ.",
+          "effects": {
+            "insight": 1,
+            "bond_fiery": 1
+          },
+          "clue": null,
+          "label": "Чуткость · доверие Эш",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "forest": {
+      "chapter": 1,
+      "location": "Лес живой памяти",
+      "bg": "3",
+      "character": "loony",
+      "clue": "forest",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "За деревьями поднимается светлый замок. На мосту тебя ждёт картограф с каштановой косой, тубусом карт и сломанной веткой в руках.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "loony",
+          "text": "Я Верес. Каждый день этот лес теряет одно воспоминание. Сегодня он забыл, как распускаются листья.",
+          "emotion": "worried",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "loony",
+          "text": "Первый знак ключа — лист. Его нельзя сорвать силой. Сначала нужно вернуть дереву то, что оно потеряло.",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Остаться с Верес и оживить дерево",
+          "next": "tree",
+          "reply": "Ты опускаешься рядом с ней на влажную траву. Верес осторожно накрывает твою ладонь своей.",
+          "effects": {
+            "bond_loony": 1
+          },
+          "clue": null,
+          "label": "Ближе к Верес",
+          "requires": {}
+        },
+        {
+          "text": "Пойти к реке за потерянной песней",
+          "next": "river",
+          "reply": "Вода под мостом повторяет одну и ту же незавершённую мелодию. Ты идёшь на звук.",
+          "effects": {
+            "insight": 1
+          },
+          "clue": null,
+          "label": "Исследовать долину",
+          "requires": {}
+        }
+      ],
+      "framing": "full"
+    },
+    "tree": {
+      "chapter": 1,
+      "location": "У старого дерева",
+      "bg": "3",
+      "character": "loony",
+      "lines": [
+        {
+          "speaker": "loony",
+          "text": "Расскажи ему о месте, где тебе было хорошо. Деревья понимают такие вещи.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Дома есть окно. Летом его всегда оставляют открытым. И даже ночью слышно, как кто-то смеётся во дворе.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        },
+        {
+          "speaker": "narrator",
+          "text": "На ветке появляется крошечный лист. Верес улыбается тебе — так, словно сама ненадолго оказалась у того окна.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "«Когда всё закончится, я покажу тебе»",
+          "next": "forest_quiz",
+          "reply": "«Я запомню обещание». Она не убирает руку, пока лист не становится серебряным осколком.",
+          "effects": {
+            "bond_loony": 2
+          },
+          "clue": null,
+          "label": "Верес запомнит это",
+          "requires": {}
+        },
+        {
+          "text": "Поблагодарить её за помощь",
+          "next": "forest_quiz",
+          "reply": "«Сегодня помогла ты». Серебряный лист ложится в первое гнездо ключа.",
+          "effects": {
+            "insight": 1
+          },
+          "clue": null,
+          "label": "Чуткость +1",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "river": {
+      "chapter": 1,
+      "location": "Поющая долина",
+      "bg": "4",
+      "character": "lovely",
+      "clue": "river",
+      "lines": [
+        {
+          "speaker": "lovely",
+          "text": "Я Лиор. Река помнит всё, но говорит только с теми, кто умеет слушать.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "lovely",
+          "text": "Сначала просыпается лист, потом отзывается пламя. Последней путь освещает луна. Вот и вся песня. Запиши, пока не забыла.",
+          "emotion": "warm",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Ты подхватываешь мелодию. На другом берегу зеленеет дерево, а в твоей ладони появляется серебряный лист.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Вернуться к Верес с первым осколком",
+          "next": "ferry_song",
+          "reply": "Верес слышит песню ещё до того, как замечает тебя. «Ты нашла её. Спасибо».",
+          "effects": {
+            "bond_loony": 1,
+            "bond_lovely": 1
+          },
+          "clue": null,
+          "label": "Доверие Верес и Лиор",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "forest_quiz": {
+      "chapter": 1,
+      "location": "Первое испытание",
+      "bg": "3",
+      "character": "loony",
+      "kind": "quiz",
+      "lines": [
+        {
+          "speaker": "loony",
+          "text": "Осколок уже у тебя. Теперь ответь ему: что помогает живому расти?"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Забота, которая оставляет свободу",
+          "next": "forest_echo",
+          "reply": "Лист вспыхивает мягким светом. «Ты услышала лес». Первый осколок пробуждён.",
+          "effects": {
+            "wisdom": 1,
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        },
+        {
+          "text": "Власть того, кто сильнее",
+          "next": "forest_echo",
+          "reply": "«Силой можно согнуть ветку. Но не заставить её жить». Осколок остаётся с тобой, сохраняя урок леса.",
+          "effects": {
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        },
+        {
+          "text": "Покой, в котором ничто не меняется",
+          "next": "forest_echo",
+          "reply": "«Тогда весна никогда бы не наступила». Осколок остаётся с тобой. Ошибка тоже может стать подсказкой.",
+          "effects": {
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "garden": {
+      "chapter": 2,
+      "location": "Подземный сад",
+      "bg": "5",
+      "character": "merry",
+      "clue": "fire",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Под землёй цветут алые розы. Среди них горит огонь, от которого пахнет дождём и письмами, забытыми в ящике стола.",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "merry",
+          "text": "Марен, королева этого невозможного сада. Здесь пламя хранит память. Второй знак ключа — именно оно.",
+          "emotion": "warm",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "merry",
+          "text": "Для осколка нужно одно воспоминание. Оно не исчезнет. Просто перестанет быть только твоим.",
+          "emotion": "resolve",
+          "hero_emotion": "worried"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Рассказать о самом тёплом дне",
+          "next": "garden_quiz",
+          "reply": "Пламя становится золотым. Марен слушает до конца, не перебивая. «Теперь у твоего счастья есть ещё один свидетель».",
+          "effects": {
+            "insight": 1,
+            "bond_merry": 1
+          },
+          "clue": null,
+          "label": "Поделиться теплом",
+          "requires": {}
+        },
+        {
+          "text": "Доверить ей то, о чём страшно говорить",
+          "next": "garden_secret",
+          "reply": "Марен подходит ближе. «Тебе не обязательно быть бесстрашной, чтобы остаться здесь».",
+          "effects": {
+            "courage": 1,
+            "bond_merry": 1
+          },
+          "clue": null,
+          "label": "Открыться Марен",
+          "requires": {}
+        }
+      ],
+      "framing": "full"
+    },
+    "garden_secret": {
+      "chapter": 2,
+      "location": "Сад невысказанного",
+      "bg": "5",
+      "character": "merry",
+      "lines": [
+        {
+          "speaker": "hero",
+          "text": "Иногда я думаю, что, если исчезну, все довольно быстро привыкнут.",
+          "emotion": "worried",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "merry",
+          "text": "Я не знаю твоего мира. Но здесь Верес уже смотрит на дорогу, по которой ты ушла. А я буду ждать у огня.",
+          "emotion": "warm",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Она вплетает маленькую красную ленту в кольцо ключа. Теперь у тебя есть вещь, которая означает: тебя ждут.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Взять Марен за руку",
+          "next": "garden_quiz",
+          "reply": "Некоторое время вы просто стоите рядом. Впервые с начала путешествия тебе не хочется торопиться.",
+          "effects": {
+            "bond_merry": 2
+          },
+          "clue": null,
+          "label": "Марен запомнит это",
+          "requires": {}
+        },
+        {
+          "text": "Пообещать вернуться к этому огню",
+          "next": "garden_quiz",
+          "reply": "«Я сохраню его». Красная лента на ключе тихо шевелится, хотя ветра нет.",
+          "effects": {
+            "bond_merry": 1,
+            "courage": 1
+          },
+          "clue": null,
+          "label": "Доверие · смелость",
+          "requires": {}
+        }
+      ],
+      "framing": "close"
+    },
+    "garden_quiz": {
+      "chapter": 2,
+      "location": "Второе испытание",
+      "bg": "5",
+      "character": "merry",
+      "kind": "quiz",
+      "lines": [
+        {
+          "speaker": "merry",
+          "text": "Что делает огонь в моём саду? Не торопись: ответ уже был в нашем разговоре."
+        }
+      ],
+      "choices": [
+        {
+          "text": "Стирает прошлое, чтобы начать заново",
+          "next": "garden_supper",
+          "reply": "«Начать заново можно и с прошлым». Марен вручает тебе осколок: здесь за ошибки не закрывают двери.",
+          "effects": {
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        },
+        {
+          "text": "Хранит память и передаёт её дальше",
+          "next": "garden_supper",
+          "reply": "Внутри осколка загорается искра. «Именно. Теперь наше воспоминание путешествует с тобой».",
+          "effects": {
+            "wisdom": 1,
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        },
+        {
+          "text": "Исполняет любое желание",
+          "next": "garden_supper",
+          "reply": "«Даже огонь не может решить за человека». Второй осколок занимает своё место, пока ещё без яркой искры.",
+          "effects": {
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "stars": {
+      "chapter": 2,
+      "location": "Обсерватория Астрид",
+      "bg": "6",
+      "character": "may",
+      "clue": "stars",
+      "lines": [
+        {
+          "speaker": "may",
+          "text": "Ты как раз вовремя. Хотя все мои карты утверждали обратное. Я Астрид.",
+          "emotion": "warm",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "may",
+          "text": "В лунном механизме четыре символа. Но звезда там для красоты. Начинай с живого, продолжай тёплым, закончи отражённым светом.",
+          "emotion": "resolve",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "А карты правда знают, чем всё закончится?",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "may",
+          "text": "Знали бы — какой смысл смотреть на звёзды?",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Попросить показать путь через ледяной дворец",
+          "next": "open_observatory",
+          "reply": "Астрид проводит по карте линию. «Нивель молчит, когда ей больно. Не принимай это за холодность».",
+          "effects": {
+            "bond_may": 1
+          },
+          "clue": null,
+          "label": "Продолжить путь",
+          "requires": {}
+        },
+        {
+          "text": "«Хорошо, что будущее ещё можно изменить»",
+          "next": "open_observatory",
+          "reply": "«Наконец-то кто-то это сказал». Астрид стирает готовый маршрут и рисует новый, рядом с твоим именем.",
+          "effects": {
+            "courage": 1,
+            "bond_may": 1
+          },
+          "clue": null,
+          "label": "Смелость +1",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "ice": {
+      "chapter": 3,
+      "location": "Дворец тихого льда",
+      "bg": "7",
+      "character": "frozy",
+      "clue": "ice",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "На поверхности замёрзшего озера застыла птица. Она не мертва: просто никогда не завершит взмах крыльев.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "frozy",
+          "text": "Я остановила мгновение, чтобы спасти её. А теперь боюсь отпустить.",
+          "emotion": "worried",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "hero",
+          "text": "Иногда сохранить — не значит оставить всё как есть.",
+          "emotion": "neutral",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Подождать рядом, пока Нивель решится",
+          "next": "thaw_studio",
+          "reply": "Ты не торопишь её. Наконец лёд тает, и птица заканчивает взмах. «Спасибо, что не решила за меня».",
+          "effects": {
+            "insight": 1,
+            "bond_frozy": 1
+          },
+          "clue": null,
+          "label": "Чуткость · доверие Нивель",
+          "requires": {}
+        },
+        {
+          "text": "Предложить растопить лёд вместе",
+          "next": "thaw_studio",
+          "reply": "Нивель кивает. Вы касаетесь льда, и птица взлетает. «Вдвоём оказалось не так страшно».",
+          "effects": {
+            "courage": 1,
+            "bond_frozy": 1
+          },
+          "clue": null,
+          "label": "Смелость · доверие Нивель",
+          "requires": {}
+        }
+      ],
+      "framing": "full"
+    },
+    "eternity": {
+      "chapter": 3,
+      "location": "Замок вечного часа",
+      "bg": "8",
+      "character": "ivy",
+      "lines": [
+        {
+          "speaker": "ivy",
+          "text": "Я Орин. Можешь остаться здесь, {name}. Ни потерь, ни старости, ни прощаний. Только этот вечер, сколько захочешь.",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Часы за её спиной стоят. На столе два прибора, но на втором — тонкий слой пыли.",
+          "emotion": "worried",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "ivy",
+          "text": "Не смотри так. Иногда ожидание — единственное, что у нас осталось.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Спросить, кого она всё ещё ждёт",
+          "next": "clock_break",
+          "reply": "«Ту, которая обещала вернуться». Ты рассказываешь Орин о птице Нивель. Когда уходишь, секундная стрелка делает первый шаг.",
+          "effects": {
+            "insight": 1,
+            "bond_ivy": 1
+          },
+          "clue": null,
+          "label": "Услышать Орин",
+          "requires": {}
+        },
+        {
+          "text": "«Я хочу жить дальше, даже если это больно»",
+          "next": "clock_break",
+          "reply": "Орин долго молчит. Затем снимает с часов стеклянный колпак. «Наверное, я тоже».",
+          "effects": {
+            "courage": 1,
+            "bond_ivy": 1
+          },
+          "clue": null,
+          "label": "Выбрать перемены",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "archive": {
+      "chapter": 3,
+      "location": "Архив забытых имён",
+      "bg": "9",
+      "character": "spidy",
+      "clue": "mirror",
+      "lines": [
+        {
+          "speaker": "spidy",
+          "text": "Тэсс. Не пугайся паутины: так я связываю истории, которым давно пора встретиться.",
+          "emotion": "warm",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "spidy",
+          "text": "Вот запись о твоём ключе. В центре не потерянный камень, а зеркало. Последнее гнездо — для твоего собственного решения.",
+          "emotion": "resolve",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Получается, мне не нужно становиться кем-то особенным?",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "spidy",
+          "text": "Достаточно перестать быть чьим-то ответом. Кстати, эту страницу я оставляю тебе.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Забрать страницу и идти к маяку",
+          "next": "echo_chamber",
+          "reply": "В записной книжке появляется рисунок зеркала. До последнего осколка остался один мост.",
+          "effects": {
+            "bond_spidy": 1
+          },
+          "clue": null,
+          "label": "Новая запись в дневнике",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "moon": {
+      "chapter": 4,
+      "location": "Лунный маяк",
+      "bg": "10",
+      "character": "moony",
+      "clue": "moon",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "В воде качается отражение луны. Саэль ждёт на краю моста, словно услышала твои шаги за несколько миров отсюда.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "moony",
+          "text": "Луна не создаёт свет, {name}. Она возвращает его. Иногда это всё, что нужно тому, кто заблудился.",
+          "emotion": "warm",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "moony",
+          "text": "Третий знак — луна. Когда механизм проснётся, дверь спросит о твоём желании. Не о нашем.",
+          "emotion": "resolve",
+          "hero_emotion": "resolve"
+        }
+      ],
+      "choices": [
+        {
+          "text": "«А ты чего хочешь?»",
+          "next": "beacon_night",
+          "reply": "«Чтобы однажды кто-нибудь задал именно этот вопрос». Саэль улыбается и придвигается ближе.",
+          "effects": {
+            "bond_moony": 2,
+            "insight": 1
+          },
+          "clue": null,
+          "label": "Ближе к Саэль",
+          "requires": {}
+        },
+        {
+          "text": "«Кажется, я уже знаю свой ответ»",
+          "next": "beacon_night",
+          "reply": "«Тогда не позволяй даже звёздам переубедить тебя». Она вкладывает в твою ладонь прохладный осколок.",
+          "effects": {
+            "courage": 1,
+            "bond_moony": 1
+          },
+          "clue": null,
+          "label": "Смелость · доверие Саэль",
+          "requires": {}
+        }
+      ],
+      "framing": "full"
+    },
+    "moon_quiz": {
+      "chapter": 4,
+      "location": "Третье испытание",
+      "bg": "10",
+      "character": "moony",
+      "kind": "quiz",
+      "lines": [
+        {
+          "speaker": "moony",
+          "text": "Что означает лунный знак в нашем ключе?"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Власть над чужими снами",
+          "next": "mechanism",
+          "reply": "«Чужие сны принадлежат тем, кто их видит». Саэль оставляет осколок у тебя и указывает на механизм.",
+          "effects": {
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        },
+        {
+          "text": "Возможность остановить время",
+          "next": "mechanism",
+          "reply": "«Об этом лучше спросить Орин. Мой свет помогает идти дальше». Последний осколок занимает своё место.",
+          "effects": {
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        },
+        {
+          "text": "Свет, который возвращают другому",
+          "next": "mechanism",
+          "reply": "Все три осколка отзываются на твои слова. Саэль касается твоего плеча: «Теперь ты понимаешь».",
+          "effects": {
+            "wisdom": 1,
+            "shards": 1
+          },
+          "clue": null,
+          "label": "Ответить",
+          "requires": {}
+        }
+      ],
+      "framing": "medium"
+    },
+    "mechanism": {
+      "chapter": 4,
+      "location": "Сердце лунного маяка",
+      "bg": "10",
+      "character": "moony",
+      "kind": "puzzle",
+      "lines": [
+        {
+          "speaker": "moony",
+          "text": "Поставь три знака в порядке их пробуждения. Если забыла — открой дневник. Все ответы ты уже встретила по дороге."
+        }
+      ],
+      "choices": [],
+      "framing": "medium"
+    },
+    "door": {
+      "chapter": 5,
+      "location": "Между мирами",
+      "bg": "11",
+      "character": null,
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Ключ поворачивается. За одной дверью — знакомый свет твоего окна. За другой — мир, в котором уже знают твоё имя.",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "hero",
+          "text": "Раньше мне казалось, что правильный выбор кто-нибудь обязательно подскажет.",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        },
+        {
+          "speaker": "narrator",
+          "text": "В зеркальном гнезде появляется твоё отражение. Дверь ждёт.",
+          "emotion": "neutral",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Вернуться домой, сохранив эту историю",
+          "next": "ending_home",
+          "reply": "Ты поворачиваешь ключ к знакомому свету. Возвращение тоже может быть началом.",
+          "effects": {},
+          "clue": null,
+          "label": "Мой мир",
+          "requires": {}
+        },
+        {
+          "text": "Остаться и построить здесь свою жизнь",
+          "next": "ending_stay",
+          "reply": "Ты выбираешь остаться. Потому что хочешь, а не потому что кому-то должна.",
+          "effects": {},
+          "clue": null,
+          "label": "Дом, близость и общее дело",
+          "requires": {}
+        },
+        {
+          "text": "Создать путь, по которому можно возвращаться",
+          "next": "ending_bridge",
+          "reply": "Три знака вспыхивают одновременно. Отражение в центре ключа больше не кажется чужим.",
+          "effects": {},
+          "clue": null,
+          "label": "3 верных ответа + разгаданный механизм",
+          "requires": {
+            "wisdom": 3,
+            "puzzle_solved": true
+          }
+        },
+        {
+          "text": "Открыть свою дверь в неизвестный мир",
+          "next": "ending_wander",
+          "reply": "Ты поворачиваешь ключ туда, где ещё нет двери. Мир уступает место твоему решению.",
+          "effects": {},
+          "clue": null,
+          "label": "Смелость 5",
+          "requires": {
+            "courage": 5
+          }
+        }
+      ],
+      "framing": "full"
+    },
+    "ordinary_evening": {
+      "chapter": 0,
+      "location": "Твоя комната · 23:17",
+      "bg": "room-v2",
+      "character": null,
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Вечер начался совершенно обычно: остывший чай, открытый альбом и обещание себе лечь пораньше. За окном шёл дождь. Ты дорисовывала замок, который уже несколько ночей видела во сне.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Странно. Я не рисовала эту дверь…",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "narrator",
+          "text": "На последней странице оказалась тонкая дверная арка. Рядом — клочок бумаги, заложенный между страницами так давно, что ты не помнила, откуда он взялся.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "«Если отражение задержится — спроси, может ли оно отпустить». Очень смешно. Кто это написал?",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        }
+      ],
+      "clue": "letter",
+      "choices": [
+        {
+          "text": "Подойти к зеркалу с альбомом",
+          "next": "mirror_call",
+          "reply": "Ты берёшь альбом. Бумага тёплая, хотя чашка рядом давно остыла. У нарисованного замка загорается одно окно.",
+          "effects": {},
+          "clue": null,
+          "label": "Взять с собой альбом",
+          "requires": {},
+          "set_flags": [
+            "kept_sketch"
+          ]
+        },
+        {
+          "text": "Сжать кулон и всмотреться в отражение",
+          "next": "mirror_call",
+          "reply": "Серебряное сердце на цепочке привычно касается ладони. Эта маленькая знакомая вещь помогает не отступить.",
+          "effects": {},
+          "clue": null,
+          "label": "Взять с собой частичку дома",
+          "requires": {},
+          "set_flags": [
+            "kept_pendant"
+          ]
+        }
+      ],
+      "framing": "full"
+    },
+    "mirror_call": {
+      "chapter": 0,
+      "location": "Зеркало, которое не спит",
+      "bg": "room-v2",
+      "character": null,
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Ты поднимаешь руку. Отражение повторяет движение на секунду позже. За твоим плечом в стекле открывается коридор, которого в комнате нет.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Ты можешь меня отпустить?",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        },
+        {
+          "speaker": "narrator",
+          "text": "«Я — да. Дверь — пока нет». Голос звучит устало, почти по-человечески. На стекле появляется трещина в форме полумесяца.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Ты тянешься к отражению нарисованной двери. Под пальцами оказывается холодная латунная ручка. Комната растворяется в запахе мокрой листвы, а в ладонь падает ключ.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Дом остался там. Значит, где-то должна быть и обратная дорога.",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Открыть настоящую дверь",
+          "next": "threshold",
+          "reply": "Сзади ещё слышен дождь, но впереди уже шелестят чужие деревья. Ты делаешь шаг между двумя звуками.",
+          "effects": {},
+          "clue": null,
+          "label": "Начало путешествия",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "forest_echo": {
+      "chapter": 1,
+      "location": "Дерево незаконченных имён",
+      "bg": "3",
+      "character": "loony",
+      "clue": "echo",
+      "lines": [
+        {
+          "speaker": "loony",
+          "text": "Подожди. Этот лист… он уже видел твой рисунок. Здесь время иногда вспоминает то, что ещё не случилось.",
+          "emotion": "worried",
+          "hero_emotion": "worried",
+          "when": "kept_sketch",
+          "alternate": "Подожди. Лист тянется к твоему кулону. Он чувствует вещь, которую держали с любовью. Дом всё ещё рядом с тобой."
+        },
+        {
+          "speaker": "narrator",
+          "text": "Из ствола доносится шёпот: «Эли… Эли…». На коре проступает имя, но последние буквы кто-то старательно зачеркнул.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Лес забывает не сам. Кто-то пытается убрать из него целую историю.",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        },
+        {
+          "speaker": "loony",
+          "text": "Я хотела попросить тебя не вмешиваться. Но это было бы нечестно. Ты уже часть этой истории.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Дослушать шёпот, даже если он зовёт в сторону",
+          "next": "lost_page",
+          "reply": "Ты прикладываешь ладонь к коре. Верес остаётся рядом. На этот раз лес произносит имя полностью: «Элиан».",
+          "effects": {
+            "insight": 1,
+            "bond_loony": 1
+          },
+          "clue": null,
+          "label": "Исследовать исчезнувшее имя",
+          "requires": {},
+          "set_flags": [
+            "heard_echo"
+          ]
+        },
+        {
+          "text": "Записать имя и не терять основной путь",
+          "next": "map_table",
+          "reply": "Ты обводишь незавершённое имя в дневнике. Ключ тихо звенит: он тоже узнал его.",
+          "effects": {},
+          "clue": null,
+          "label": "Вернуться к поиску осколков",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "medium"
+    },
+    "lost_page": {
+      "chapter": 1,
+      "location": "Страница, которую помнит лес",
+      "bg": "3",
+      "character": "loony",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Между корнями лежит страница чужого дневника: «Адель говорит, что дома я забуду этот мир. А я боюсь, что здесь забуду, как выбирать».",
+          "emotion": "worried",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "loony",
+          "text": "Элиан. Она научила меня слушать деревья. Я помнила её голос… но всё это время не могла вспомнить имя.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Я спрошу у Адель. И сначала выслушаю ответ.",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        },
+        {
+          "speaker": "loony",
+          "text": "Спасибо. Мне легче, когда ты обещаешь не победить всех, а понять.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Сохранить страницу",
+          "next": "map_table",
+          "reply": "Ты складываешь страницу вчетверо. Чужая история больше не выглядит просто загадкой: у неё есть человек, которого здесь ждут.",
+          "effects": {},
+          "clue": null,
+          "label": "Память об Элиан",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "lady_confession": {
+      "chapter": 3,
+      "location": "Зал, в котором погасли часы",
+      "bg": "0",
+      "character": "lady",
+      "clue": "confession",
+      "lines": [
+        {
+          "speaker": "lady",
+          "text": "Ты нашла её имя. Я надеялась, что до этого разговора у меня будет больше времени.",
+          "emotion": "worried",
+          "hero_emotion": "neutral",
+          "when": "heard_echo",
+          "alternate": "Ты слышала шёпот в лесу. Её звали Элиан. Я должна была рассказать об этом ещё при нашей первой встрече."
+        },
+        {
+          "speaker": "hero",
+          "text": "Что ты сделала?",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "lady",
+          "text": "Она захотела домой. А я попросила ключ оставить дверь открытой, пока она не передумает. Я сказала «пока». Ключ услышал «навсегда».",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "lady",
+          "text": "Он удержал её между мирами. С тех пор всё вокруг теряет имена, память, время. Я не знала, как исправить это… и позвала ещё одного человека.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Меня. Ты позвала меня, чтобы я решила то, в чём сама боишься признаться.",
+          "emotion": "neutral",
+          "hero_emotion": "resolve"
+        }
+      ],
+      "choices": [
+        {
+          "text": "«Помогу, если больше не будет тайных условий»",
+          "next": "ice",
+          "reply": "Адель снимает кольцо хранительницы и кладёт на стол. «Никаких условий. Даже если в конце ты решишь уйти».",
+          "effects": {
+            "insight": 1,
+            "bond_lady": 1
+          },
+          "clue": null,
+          "label": "Поставить границу · чуткость",
+          "requires": {},
+          "set_flags": [
+            "promised_truth"
+          ]
+        },
+        {
+          "text": "«Помоги мне вернуть Элиан право выбрать»",
+          "next": "ice",
+          "reply": "«Хорошо». Адель произносит это так тихо, что слышно, как впервые за много лет сдвигается стрелка часов.",
+          "effects": {
+            "courage": 1,
+            "bond_lady": 1
+          },
+          "clue": null,
+          "label": "Потребовать действия · смелость",
+          "requires": {},
+          "set_flags": [
+            "promised_truth"
+          ]
+        }
+      ],
+      "framing": "close"
+    },
+    "echo_chamber": {
+      "chapter": 4,
+      "location": "Комната между отражениями",
+      "bg": "9",
+      "character": "spidy",
+      "clue": "elian",
+      "lines": [
+        {
+          "speaker": "spidy",
+          "text": "Теперь ты знаешь, почему страницы пустеют. Механизм удерживает чужую волю и стирает всё, что ей противоречит. Даже воспоминания друзей.",
+          "emotion": "worried",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "В стекле архивного шкафа возникает силуэт. «Не обещай вернуть меня к ней, — шепчет Элиан. — Спроси, куда я хочу».",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "hero",
+          "text": "Куда ты хочешь, Элиан?",
+          "emotion": "neutral",
+          "hero_emotion": "warm"
+        },
+        {
+          "speaker": "narrator",
+          "text": "«Домой. А потом, может быть, в гости». На миг голос становится совершенно обычным. Будто вы обсуждаете завтрашний день.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Восстановить её имя в записи механизма",
+          "next": "unsent_letter",
+          "reply": "Ты собираешь фразу из найденных следов: «Элиан имеет право уйти». Стекло светлеет. Где-то в твоём мире открывается ещё одно окно.",
+          "effects": {},
+          "clue": null,
+          "label": "Чуткость 4 · освободить Элиан",
+          "requires": {
+            "insight": 4
+          },
+          "set_flags": [
+            "echo_released"
+          ]
+        },
+        {
+          "text": "Сохранить её голос, пока не откроется дверь",
+          "next": "unsent_letter",
+          "reply": "Ты записываешь каждое слово. Элиан ещё связана с механизмом, но теперь её желание невозможно будет принять за чьё-то чужое.",
+          "effects": {},
+          "clue": null,
+          "label": "Сберечь её историю",
+          "requires": {},
+          "set_flags": [
+            "echo_remembered"
+          ]
+        }
+      ],
+      "framing": "close"
+    },
+    "last_reflection": {
+      "chapter": 5,
+      "location": "Перед последней дверью",
+      "bg": "10",
+      "character": "moony",
+      "lines": [
+        {
+          "speaker": "moony",
+          "text": "Дверь открывается. Элиан уже прошла домой. Адель стоит на другом берегу и впервые не пытается её остановить.",
+          "emotion": "warm",
+          "hero_emotion": "warm",
+          "when": "echo_released",
+          "alternate": "Дверь открывается. Я слышу запись голоса Элиан. Я передам её Адель: теперь им предстоит закончить свой разговор без чужих решений."
+        },
+        {
+          "speaker": "hero",
+          "text": "А мой дом? Он всё ещё там?",
+          "emotion": "neutral",
+          "hero_emotion": "worried"
+        },
+        {
+          "speaker": "moony",
+          "text": "Посмотри на альбом. На рисунке зажёгся твой настоящий подоконник. Ты не теряла дорогу — просто училась её узнавать.",
+          "emotion": "warm",
+          "hero_emotion": "neutral",
+          "when": "kept_sketch",
+          "alternate": "Кулон всё ещё тёплый. Вещи не умеют обещать, но иногда помогают помнить: дом существует, даже когда его не видно."
+        },
+        {
+          "speaker": "moony",
+          "text": "Что бы ты сейчас ни выбрала, это не обесценит тех, кого встретила. Близость — не замок на двери.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Взять ключ и сделать свой выбор",
+          "next": "possible_tomorrow",
+          "reply": "Ты перестаёшь искать в чужих лицах разрешение. Сердце стучит часто, но больше не от страха.",
+          "effects": {},
+          "clue": null,
+          "label": "Последняя дверь",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "close"
+    },
+    "threshold_workshop": {
+      "chapter": 0,
+      "location": "Мастерская незапертых дверей",
+      "bg": "0",
+      "character": "lady",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Вместо трона у Адель — верстак. На стене десятки дверных ручек, и под каждой написано, кто заказал ремонт.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "lady",
+          "text": "Когда-то я знала каждого, кто проходил здесь. Потом решила, что быть нужной — значит быть незаменимой. Плохое открытие для мастера дверей.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "А что ты делала, когда никто не нуждался в помощи?",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "lady",
+          "text": "Не помню. Элиан говорила, что мне пора научиться отдыхать. Я принимала это за отказ от меня.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Оставить на верстаке место для её собственного рисунка",
+          "next": "fiery",
+          "reply": "Адель отодвигает инструменты. Маленькое пустое место почему-то кажется началом перемен.",
+          "effects": {
+            "bond_lady": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "forge_lunch": {
+      "chapter": 0,
+      "location": "Обед у остывающей кузни",
+      "bg": "2",
+      "character": "fiery",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Эш тушит горелку и разламывает хлеб. На другой стороне долины рабочие заканчивают мост, по которому утром пойдут дети.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "fiery",
+          "text": "Никто не пишет баллады о починенных перилах. Зато я знаю: кто-то вернётся домой. Мне хватает.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Значит, здесь тоже есть обычная жизнь. Не только тайны и испытания.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "fiery",
+          "text": "Удивительно, да? Если останешься — я попрошу помочь с чертежом. Если уйдёшь — всё равно дам хлеба в дорогу.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Нарисовать для неё удобную ручку инструмента",
+          "next": "forest",
+          "reply": "Эш пробует новый хват по твоему рисунку. «Вот. Это мы сделали вместе».",
+          "effects": {
+            "bond_fiery": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "map_table": {
+      "chapter": 1,
+      "location": "Стол картографа под ветвями",
+      "bg": "3",
+      "character": "loony",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Верес разворачивает карту. Место у реки оставлено пустым: тропа исчезла, и пожилая соседка больше не может добраться до рынка.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "loony",
+          "text": "Я умею записывать то, что помню. Но не умею рисовать то, чего ещё нет. Ты умеешь — я видела твой замок.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Давай начнём с моста. Здесь можно положить доски между корнями.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Вы спорите о расстоянии, смеётесь над слишком крутой лестницей и до темноты делаете первый общий чертёж.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "loony",
+          "text": "У меня есть свободный стол. Если захочешь задержаться, будем делать карты для тех, кому трудно идти. И я научу тебя читать лес.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Оставить рядом со своей подписью её имя",
+          "next": "garden",
+          "reply": "Верес не убирает карту. «Завтра покажем её соседке». Впервые этот мир обещает тебе не загадку, а завтрашний день.",
+          "effects": {
+            "bond_loony": 1
+          },
+          "clue": null,
+          "label": "Совместное воспоминание",
+          "requires": {},
+          "set_flags": [
+            "shared_map"
+          ]
+        },
+        {
+          "text": "Сохранить копию, чтобы прислать идеи из дома",
+          "next": "garden",
+          "reply": "«Тогда оставим на полях место для писем». Верес принимает и такой способ быть рядом.",
+          "effects": {
+            "bond_loony": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "ferry_song": {
+      "chapter": 1,
+      "location": "Последний вечерний паром",
+      "bg": "4",
+      "character": "lovely",
+      "lines": [
+        {
+          "speaker": "lovely",
+          "text": "За день я слышу двадцать историй. А вечером беру флейту и понимаю, что опять играю чужую мелодию.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Давай сегодня начнём с твоей. Какой день ты хотела бы запомнить?",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "lovely",
+          "text": "Этот. Ты ещё не знаешь, кто я, но уже спросила.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Новая песня неровная, с длинной паузой посередине. Лиор не извиняется за паузу — и ты запоминаешь её лучше любой ноты.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Дослушать песню до конца",
+          "next": "forest_quiz",
+          "reply": "Лиор обещает сыграть её при вашей следующей встрече.",
+          "effects": {
+            "bond_lovely": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "garden_supper": {
+      "chapter": 2,
+      "location": "Общий стол подземного сада",
+      "bg": "5",
+      "character": "merry",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Под светящимися корнями стоят не троны, а столы. Марен разливает суп. Сад кормит целый квартал, и после полива здесь ужинают вместе.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "merry",
+          "text": "Я потеряла один урожай, потому что никого не просила помочь. Все привыкли: Марен справится. Я сама их приучила.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Сегодня я могу остаться на вечернюю смену. Покажешь, где держат семена?",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Вы подписываете бумажные пакетики. Марен ошибается в названии, ты исправляешь её; она смеётся и наливает тебе ещё чаю.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "merry",
+          "text": "Наверху пустует комната. Свет там плохой для цветов, но хороший для рисунков. Я была бы рада соседке. И человеку, которому не нужно притворяться сильной.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Посадить вместе первое семечко нового урожая",
+          "next": "stars",
+          "reply": "«Увидим, что получится». У твоего горшка появляется место рядом с её горшком.",
+          "effects": {
+            "bond_merry": 1
+          },
+          "clue": null,
+          "label": "Совместное воспоминание",
+          "requires": {},
+          "set_flags": [
+            "garden_shift"
+          ]
+        },
+        {
+          "text": "Нарисовать таблички и оставить их саду",
+          "next": "stars",
+          "reply": "Марен вешает первую табличку. «Это уже помощь. Обещать больше, чем хочешь, не нужно».",
+          "effects": {
+            "bond_merry": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "open_observatory": {
+      "chapter": 2,
+      "location": "Обсерватория для всех",
+      "bg": "6",
+      "character": "may",
+      "lines": [
+        {
+          "speaker": "may",
+          "text": "Завтра сюда придёт школьный класс. Раньше вход разрешали только тем, кто уже знал названия звёзд. Нелепое правило для места, где можно учиться.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Я могла бы нарисовать карту так, чтобы её понял человек из другого мира.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "may",
+          "text": "Тогда начни с вопроса, на который сама не знаешь ответа. Для него и оставим самую большую страницу.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Оставить на карте место для новых вопросов",
+          "next": "lady_confession",
+          "reply": "Астрид подписывает вашу работу двумя именами. Здесь твоё незнание стало частью открытия.",
+          "effects": {
+            "bond_may": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "thaw_studio": {
+      "chapter": 3,
+      "location": "Мастерская весеннего льда",
+      "bg": "7",
+      "character": "frozy",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Нивель вырезает вторую птицу из дерева. У первой, ледяной, наконец расправилось крыло.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "frozy",
+          "text": "Дерево останется. Птица улетит. Раньше я думала, что должна выбрать что-то одно.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Ты можешь помнить и не удерживать.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "frozy",
+          "text": "Оставь мне свой набросок. Я сделаю тебе рамку — к возвращению или на прощание.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Нарисовать птицу уже в полёте",
+          "next": "eternity",
+          "reply": "Нивель оставляет на рисунке свободное небо.",
+          "effects": {
+            "bond_frozy": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "clock_break": {
+      "chapter": 3,
+      "location": "Часы с обеденным перерывом",
+      "bg": "8",
+      "character": "ivy",
+      "lines": [
+        {
+          "speaker": "ivy",
+          "text": "Я ремонтировала эти часы двадцать лет. Если бы закончила раньше, пришлось бы решить, чем жить дальше.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "И что ты решила?",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "ivy",
+          "text": "Сегодня — пообедать не за работой. Завтра — научить кого-нибудь другому ремеслу. Не всё новое должно быть подвигом.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Закрыть мастерскую вместе с ней на один час",
+          "next": "archive",
+          "reply": "Вы идёте по улице без спешки. Мир кажется обитаемым именно в такие минуты.",
+          "effects": {
+            "bond_ivy": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "unsent_letter": {
+      "chapter": 4,
+      "location": "Письмо в свой мир",
+      "bg": "9",
+      "character": "spidy",
+      "lines": [
+        {
+          "speaker": "spidy",
+          "text": "Напиши домой. Не отчёт о подвиге — просто письмо. Что ты ела, с кем смеялась. Что тебя напугало.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Я боюсь, что если мне здесь хорошо, это значит, будто дома было недостаточно.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "spidy",
+          "text": "Любовь к новому месту не стирает прежнюю. Но тем, кто ждёт, стоит сказать, что ты жива. Я сохраню письмо до открытия перехода.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "Ты пишешь о хлебе Эш, чернилах на пальцах Верес и чае Марен. У путешествия появляются подробности, которые хочется кому-то рассказать.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Запечатать письмо, не прощаясь навсегда",
+          "next": "moon",
+          "reply": "Тэсс вписывает настоящий обратный адрес: «Там, где сейчас я».",
+          "effects": {
+            "bond_spidy": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "beacon_night": {
+      "chapter": 4,
+      "location": "Ночная вахта у маяка",
+      "bg": "10",
+      "character": "moony",
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "До рассвета вы проверяете линзы. Саэль подаёт тебе инструменты, а ты зарисовываешь трещину. Один луч снова дотягивается до далёкой дороги.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "moony",
+          "text": "Я привыкла говорить, что люблю тишину. На самом деле не знала, как попросить кого-нибудь остаться на чай.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Можно начать так: «Останься на чай».",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        },
+        {
+          "speaker": "moony",
+          "text": "Останься на чай. А потом — если захочешь — поможешь устроить здесь школу навигации. Внизу есть комната с окнами на восток.",
+          "emotion": "warm",
+          "hero_emotion": "warm"
+        },
+        {
+          "speaker": "narrator",
+          "text": "За окном поднимается солнце. Тебе нравится не только свет маяка, но и то, как Саэль ставит рядом две чашки.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Нарисовать первый урок для будущей школы",
+          "next": "moon_quiz",
+          "reply": "Саэль сохраняет лист между рабочими чертежами. Твоё место здесь — не долг, а возможность.",
+          "effects": {
+            "bond_moony": 1
+          },
+          "clue": null,
+          "label": "Совместное воспоминание",
+          "requires": {},
+          "set_flags": [
+            "beacon_watch"
+          ]
+        },
+        {
+          "text": "Остаться на чай, не обещая целую жизнь",
+          "next": "moon_quiz",
+          "reply": "«Этого достаточно». Вы встречаете рассвет без обещаний, которых никто ещё не готов дать.",
+          "effects": {
+            "bond_moony": 1
+          },
+          "clue": null,
+          "label": "Продолжить разговор",
+          "requires": {},
+          "set_flags": []
+        }
+      ],
+      "framing": "full"
+    },
+    "possible_tomorrow": {
+      "chapter": 5,
+      "location": "Как выглядит твой завтрашний день",
+      "bg": "11",
+      "character": null,
+      "lines": [
+        {
+          "speaker": "hero",
+          "text": "Я пришла сюда случайно. Но теперь знаю не только дорогу назад. Знаю, как здесь можно жить.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "narrator",
+          "text": "В памяти остаются общий чертёж, тёплая чашка, место у рабочего стола. Если остаться, будут и усталость, и ссоры, и обычные дни. Именно они делают мир настоящим.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        },
+        {
+          "speaker": "hero",
+          "text": "Я не обязана решать из благодарности. Но могу представить будущее, которое выберу сама.",
+          "emotion": "neutral",
+          "hero_emotion": "neutral"
+        }
+      ],
+      "choices": [
+        {
+          "text": "Представить мастерскую карт рядом с Верес",
+          "next": "door",
+          "reply": "Ты видишь стол, собственные рисунки и дорогу, которую вы поможете вернуть людям. Это возможная жизнь — последняя дверь всё ещё открыта.",
+          "effects": {},
+          "clue": null,
+          "label": "Совместное воспоминание",
+          "requires": {},
+          "set_flags": [
+            "stay_forest"
+          ]
+        },
+        {
+          "text": "Представить дом и общий сад с Марен",
+          "next": "door",
+          "reply": "Ты представляешь собственную комнату, первый урожай и человека, с которым можно делить заботы. Последняя дверь всё ещё открыта.",
+          "effects": {},
+          "clue": null,
+          "label": "Совместное воспоминание",
+          "requires": {},
+          "set_flags": [
+            "stay_garden"
+          ]
+        },
+        {
+          "text": "Представить школу у маяка с Саэль",
+          "next": "door",
+          "reply": "В твоём будущем появляются ученики, свет маяка и две чашки на подоконнике. Последняя дверь всё ещё открыта.",
+          "effects": {},
+          "clue": null,
+          "label": "Совместное воспоминание",
+          "requires": {},
+          "set_flags": [
+            "stay_beacon"
+          ]
+        }
+      ],
+      "framing": "full"
+    }
+  },
+  "characters": {
+    "lady": {
+      "name": "Адель",
+      "title": "Мастер переходов",
+      "image": "assets/characters/v3/lady.png",
+      "color": "#b8dfbb",
+      "bio": "Она умеет чинить двери, но учится не удерживать людей.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "fiery": {
+      "name": "Эш",
+      "title": "Кузнец огненных мостов",
+      "image": "assets/characters/v3/fiery.png",
+      "color": "#f4b77c",
+      "bio": "Для неё забота — это работа, которую замечают, когда она не сделана.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "loony": {
+      "name": "Верес",
+      "title": "Картограф живого леса",
+      "image": "assets/characters/v3/loony.png",
+      "color": "#c8dca0",
+      "atlas": true,
+      "columns": 2,
+      "bio": "Хочет нарисовать карту, на которой найдётся место и чужим воспоминаниям.",
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "lovely": {
+      "name": "Лиор",
+      "title": "Музыкант речной переправы",
+      "image": "assets/characters/v3/lovely.png",
+      "color": "#e8c9b0",
+      "bio": "Помнит песни пассажиров и мечтает однажды сыграть свою.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "merry": {
+      "name": "Марен",
+      "title": "Садовница подземного солнца",
+      "image": "assets/characters/v3/merry.png",
+      "color": "#e4a1b8",
+      "atlas": true,
+      "columns": 2,
+      "bio": "Выращивает хлебные цветы для города. Ей нужен партнёр, а не спаситель.",
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "may": {
+      "name": "Астрид",
+      "title": "Астроном без готовых ответов",
+      "image": "assets/characters/v3/may.png",
+      "color": "#9bbcea",
+      "bio": "Строит обсерваторию, где каждый сможет назвать свою звезду.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "frozy": {
+      "name": "Нивель",
+      "title": "Скульптор ледяной памяти",
+      "image": "assets/characters/v3/frozy.png",
+      "color": "#b7e1eb",
+      "bio": "Учится оставлять след, не превращая жизнь в неподвижный памятник.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "ivy": {
+      "name": "Орин",
+      "title": "Реставратор забытых часов",
+      "image": "assets/characters/v3/ivy.png",
+      "color": "#c8b6e6",
+      "bio": "Отдаёт людям их время, хотя своё долго тратила на ожидание.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "spidy": {
+      "name": "Тэсс",
+      "title": "Хранительница недоставленных писем",
+      "image": "assets/characters/v3/spidy.png",
+      "color": "#e3d4b1",
+      "bio": "Верит, что даже несказанным словам нужен адресат.",
+      "atlas": true,
+      "columns": 2,
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    },
+    "moony": {
+      "name": "Саэль",
+      "title": "Инженер лунного маяка",
+      "image": "assets/characters/v3/moony.png",
+      "color": "#baa7ea",
+      "atlas": true,
+      "columns": 2,
+      "bio": "Не хочет больше дежурить одна. Просит о близости, не требуя её.",
+      "fullbody": true,
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 0
+      }
+    }
+  },
+  "chapters": [
+    "По ту сторону двери",
+    "То, что помнит лес",
+    "Сердце подземного сада",
+    "Цена вечности",
+    "Лунный механизм",
+    "Свой путь"
+  ],
+  "clues": {
+    "threshold": {
+      "title": "Пустое место в ключе",
+      "text": "В ключе три пустых гнезда. Четвёртое, в самой середине, похоже на маленькое зеркало."
+    },
+    "forest": {
+      "title": "Знак леса",
+      "text": "Лист — первый знак. Живое растёт, когда о нём заботятся, а не когда им владеют."
+    },
+    "river": {
+      "title": "Песня Лиор",
+      "text": "Сначала просыпается лист, потом отзывается пламя. Последней путь освещает луна."
+    },
+    "fire": {
+      "title": "Знак огня",
+      "text": "Пламя — второй знак. Огонь в саду Марен сохраняет память, а не уничтожает её."
+    },
+    "stars": {
+      "title": "Поправка Астрид",
+      "text": "Начинай с живого, продолжай тёплым, закончи отражённым светом. Звезда — украшение, а не часть замка."
+    },
+    "ice": {
+      "title": "То, что отпускает лёд",
+      "text": "Лёд хранит мгновение. Чтобы оно снова стало жизнью, ему нужно позволить измениться."
+    },
+    "mirror": {
+      "title": "Четвёртое гнездо",
+      "text": "В центре ключа не недостающий камень, а отражение того, кто держит его. Последний выбор нельзя поручить хранительнице."
+    },
+    "moon": {
+      "title": "Знак луны",
+      "text": "Луна — третий знак. Она не создаёт свет, а возвращает его. Три знака: лист, пламя, луна."
+    },
+    "letter": {
+      "title": "Письмо без отправителя",
+      "text": "В старом альбоме: «Если отражение задержится — не спрашивай, кто тебя зовёт. Спроси, может ли он отпустить». На полях знакомый знак полумесяца."
+    },
+    "echo": {
+      "title": "Имя под зачёркнутой строкой",
+      "text": "Лес повторяет начало имени: «Эли…». Кто-то вычеркнул человека из истории, но не смог заставить всех забыть его."
+    },
+    "confession": {
+      "title": "Ошибка Адель",
+      "text": "Адель удержала переход открытым, когда её подруга Элиан хотела уйти. Ключ превратил просьбу остаться в приказ. Разлом начался с чужого выбора."
+    },
+    "elian": {
+      "title": "Элиан",
+      "text": "Последняя путница не исчезла: её имя застряло в механизме. Вернуть имя — значит признать её право уйти. Дверь не должна владеть теми, кто через неё проходит."
+    }
+  },
+  "endings": {
+    "ending_home": {
+      "title": "Свет в твоём окне",
+      "subtitle": "Ты выбрала возвращение",
+      "bg": "3",
+      "text": "За дверью всё ещё лето. На столе лежат привычные вещи, во дворе кто-то смеётся. Только в кармане теперь есть ключ с красной лентой. Ты возвращаешься к своей жизни, зная: однажды тебя услышали даже в другом мире.",
+      "after_echo": "Через неделю приходит открытка. «Спасибо, что спросила. Элиан». На обороте — тот самый замок. Теперь ты знаешь, что встреча не была сном."
+    },
+    "ending_stay": {
+      "title": "Там, где тебя ждут",
+      "subtitle": "Ты выбрала близость",
+      "bg": "5",
+      "text": "{companion} встречает тебя по ту сторону двери. Не как спасительницу и не как гостью. Как человека, для которого здесь оставили место. Впереди будет обычная, сложная, прекрасная жизнь — и на этот раз ты сама выбрала, с кем её разделить.",
+      "after_echo": "Элиан иногда пишет из твоего мира. Адель читает её письма у открытого окна и больше не пытается остановить время."
+    },
+    "ending_bridge": {
+      "title": "Хранительница переходов",
+      "subtitle": "Тайная концовка · два мира, один путь",
+      "bg": "10",
+      "text": "Лист, пламя и луна соединяются в тонкую нить света. Дверь больше не разделяет миры. Верес первой ступает на новый мост; за ней идут остальные. Теперь возвращение не означает прощания. Ты не стала хранительницей чужого порядка. Ты создала свой.",
+      "after_echo": "Первое правило перехода вы пишете вместе: «Каждый может уйти. Каждый может вернуться по собственному желанию». Элиан ставит под ним первую подпись."
+    },
+    "ending_wander": {
+      "title": "За краем карты",
+      "subtitle": "Ты выбрала неизвестность",
+      "bg": "6",
+      "text": "Астрид будет долго искать эту дорогу на своих картах. Эш скажет, что всегда знала. А ты уже идёшь под незнакомыми звёздами, держа ключ в раскрытой ладони. На этот раз история начинается не с того, что тебя позвали. Ты сама сделала первый шаг.",
+      "after_echo": "В дорожном альбоме появляется ещё одна строчка от Элиан: «Спасибо за моё начало. Теперь береги своё»."
+    }
+  },
+  "hero": {
+    "id": "hero",
+    "title": "Та, что услышала отражение",
+    "image": "assets/characters/v4/hero-voyage-calm.png",
+    "atlas": true,
+    "columns": 2,
+    "fullbody": true,
+    "frames": {
+      "neutral": 0,
+      "warm": 1,
+      "worried": 0,
+      "resolve": 0
+    }
+  },
+  "emotions": {
+    "neutral": {
+      "frame": 0,
+      "label": "Слушает"
+    },
+    "warm": {
+      "frame": 1,
+      "label": "Мягко улыбается"
+    },
+    "worried": {
+      "frame": 2,
+      "label": "Встревожена"
+    },
+    "resolve": {
+      "frame": 3,
+      "label": "Говорит уверенно"
+    }
+  },
+  "looks": {
+    "voyage": {
+      "name": "Первая дорога",
+      "detail": "Синий дорожный костюм · распущенные волосы · естественный макияж",
+      "image": "assets/characters/v4/hero-voyage-calm.png",
+      "emotion_images": {
+        "neutral": "assets/characters/v4/hero-voyage-calm.png",
+        "warm": "assets/characters/v4/hero-voyage-calm.png",
+        "worried": "assets/characters/v4/hero-voyage-intense.png",
+        "resolve": "assets/characters/v4/hero-voyage-intense.png"
+      },
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 1
+      }
+    },
+    "woodland": {
+      "name": "Тёплый гербарий",
+      "detail": "Терракотовый сарафан · полусобранная коса · мягкий румянец",
+      "image": "assets/characters/v4/hero-woodland-calm.png",
+      "emotion_images": {
+        "neutral": "assets/characters/v4/hero-woodland-calm.png",
+        "warm": "assets/characters/v4/hero-woodland-calm.png",
+        "worried": "assets/characters/v4/hero-woodland-intense.png",
+        "resolve": "assets/characters/v4/hero-woodland-intense.png"
+      },
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 1
+      }
+    },
+    "moon": {
+      "name": "Вечер у маяка",
+      "detail": "Серебристо-синий наряд · низкий пучок · тонкие стрелки",
+      "image": "assets/characters/v4/hero-moon-calm.png",
+      "emotion_images": {
+        "neutral": "assets/characters/v4/hero-moon-calm.png",
+        "warm": "assets/characters/v4/hero-moon-calm.png",
+        "worried": "assets/characters/v4/hero-moon-intense.png",
+        "resolve": "assets/characters/v4/hero-moon-intense.png"
+      },
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 1
+      }
+    },
+    "lilac": {
+      "name": "Лиловое отражение",
+      "detail": "Любимое платье с золотой вышивкой · лиловый плащ · распущенные волосы",
+      "image": "assets/characters/v4/hero-lilac-calm.png",
+      "emotion_images": {
+        "neutral": "assets/characters/v4/hero-lilac-calm.png",
+        "warm": "assets/characters/v4/hero-lilac-calm.png",
+        "worried": "assets/characters/v4/hero-lilac-intense.png",
+        "resolve": "assets/characters/v4/hero-lilac-intense.png"
+      },
+      "frames": {
+        "neutral": 0,
+        "warm": 1,
+        "worried": 0,
+        "resolve": 1
+      }
+    }
+  },
+  "stay_lives": {
+    "loony": [
+      "3",
+      "Ты остаёшься в лесной долине. У тебя появляется свой стол в мастерской Верес: утром вы делаете карты доступных троп, вечером она учит тебя слушать лес. Вы не всегда соглашаетесь, зато теперь умеете спрашивать. На двери висит первая карта с двумя подписями. Домой отправлено письмо; новая жизнь не требует забыть прежнюю."
+    ],
+    "merry": [
+      "5",
+      "Ты выбираешь комнату над садом Марен. Первый урожай получается скромным, зато на общем столе стоят ваши цветы. Ты рисуешь вывески и учишь детей делать гербарии; Марен учится оставлять работу до утра. Иногда вы спорите о пустяках, потом миритесь за чаем. Ты остаёшься ради этой близости и жизни, которую можешь создавать сама. Домой уходит письмо с твоим новым адресом."
+    ],
+    "moony": [
+      "10",
+      "Ты остаёшься у маяка Саэль. Внизу открывается небольшая школа навигации: на стенах твои карты, на столах линзы и карандаши. У каждой из вас есть своё дело и время для себя; ночные вахты вы делите. Две чашки на восточном окне становятся привычкой. Ты выбрала любовь, работу и собственный дом — и отправила письмо тем, кто ждёт тебя в прежнем мире."
+    ]
+  },
+  "puzzle_symbols": [
+    {
+      "id": "leaf",
+      "name": "Лист",
+      "icon": "❧"
+    },
+    {
+      "id": "flame",
+      "name": "Пламя",
+      "icon": "♨"
+    },
+    {
+      "id": "moon",
+      "name": "Луна",
+      "icon": "☾"
+    },
+    {
+      "id": "star",
+      "name": "Звезда",
+      "icon": "✧"
+    }
+  ],
+  "puzzle_answer": [
+    "leaf",
+    "flame",
+    "moon"
+  ],
+  "stat_names": {
+    "courage": "Смелость",
+    "insight": "Чуткость",
+    "wisdom": "Верных ответов",
+    "shards": "Осколки"
+  },
+  "fresh": {
+    "schema": 1,
+    "edition": 3,
+    "look": "voyage",
+    "name": "Арти",
+    "node": "ordinary_evening",
+    "beat": 0,
+    "stats": {
+      "courage": 0,
+      "insight": 0,
+      "wisdom": 0,
+      "shards": 0
+    },
+    "bonds": {
+      "lady": 0,
+      "fiery": 0,
+      "loony": 0,
+      "lovely": 0,
+      "merry": 0,
+      "may": 0,
+      "frozy": 0,
+      "ivy": 0,
+      "spidy": 0,
+      "moony": 0
+    },
+    "clues": [],
+    "met": [],
+    "history": [],
+    "feedback": null,
+    "flags": [],
+    "puzzle_solved": false,
+    "puzzle_attempts": 0,
+    "started": false
+  },
+  "flags": [
+    "beacon_watch",
+    "echo_released",
+    "echo_remembered",
+    "garden_shift",
+    "heard_echo",
+    "kept_pendant",
+    "kept_sketch",
+    "promised_truth",
+    "shared_map",
+    "stay_beacon",
+    "stay_forest",
+    "stay_garden"
+  ],
+  "puzzle_results": {
+    "help": {
+      "text": "Саэль поворачивает кольца за тебя. «Помощь — тоже часть пути». Дверь открыта, но тайну соединения миров ещё предстоит понять.",
+      "next": "last_reflection",
+      "effects": [
+        "Саэль помогла открыть дверь"
+      ]
+    },
+    "retry": {
+      "text": "Механизм тихо щёлкает и замирает. Начни с живого, затем вспомни тепло и отражённый свет. Подсказки сохранены в дневнике.",
+      "next": "mechanism",
+      "effects": [
+        "Можно попробовать снова"
+      ]
+    },
+    "solved": {
+      "text": "Лист. Пламя. Луна. Три кольца совпадают, и свет пробегает по ключу. Дверь между мирами открыта.",
+      "next": "last_reflection",
+      "effects": [
+        "Лунный механизм разгадан"
+      ]
+    }
+  },
+  "afterword_remembered": "В дневнике остался голос Элиан. Её история ещё не закончена, но теперь она больше не забыта."
+}

@@ -1,0 +1,38 @@
+name: between_worlds
+description: Between Worlds — an offline interactive fantasy novel.
+publish_to: none
+version: 2.0.2+5
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  media_kit: ^1.2.6
+  media_kit_video: ^2.0.1
+  media_kit_libs_video: ^1.0.7
+  shared_preferences: ^2.5.5
+  cupertino_icons: ^1.0.9
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  archive: ^4.5.2
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/
+    - assets/locales/
+    - assets/characters/v3/
+    - assets/characters/v4/
+    - assets/backgrounds/
+    - assets/music/
+    - assets/video/
+    - assets/branding/
+    - assets/effects/
+    - assets/fonts/OFL.txt
+  fonts:
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/Lora.ttf
