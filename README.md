@@ -6,11 +6,13 @@
 
 ![Flutter](https://img.shields.io/badge/built%20with-Flutter-5c7db5?style=for-the-badge) ![Offline](https://img.shields.io/badge/story-offline-294d49?style=for-the-badge) ![MIT code](https://img.shields.io/badge/code-MIT-c7a66b?style=for-the-badge)
 
-[Screenshots](#-screenshots) · [Features](#-features) · [Get started](#-get-started) · [Browser edition](https://github.com/Arty1909/Between-Worlds)
+[Watch the video](https://youtu.be/Vh9yi6XxkY4) · [Screenshots](#-screenshots) · [Features](#-features) · [Get started](#-get-started) · [Browser edition](https://github.com/Arty1909/Between-Worlds)
 
 </div>
 
-![Between Worlds home screen](docs/screenshots/home.png)
+[![Between Worlds Flutter home screen with the heroine in a red dress and fully loaded castle landscape](docs/screenshots/home.png)](https://youtu.be/Vh9yi6XxkY4)
+
+**[▶ Watch the Between Worlds video on YouTube](https://youtu.be/Vh9yi6XxkY4)**
 
 ## ✧ About the game
 
